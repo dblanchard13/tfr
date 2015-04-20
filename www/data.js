@@ -1,8 +1,8 @@
 angular.module('data', [])
 
-.factory('MatchesFactory', function($http){
+.factory('MatchesFactory', function($http, baseUrl){
 
-  var baseUrl = 'http://localhost:8888';
+  // var baseUrl = 'http://localhost:8888';
   var liked = [];
   var matches = [];
   
@@ -139,7 +139,7 @@ angular.module('data', [])
 
 })
 
-.factory('ProfileFactory', function($http){
+.factory('ProfileFactory', function($http, baseUrl){
 
   var profile = {
     gender: null,
@@ -147,7 +147,7 @@ angular.module('data', [])
     keywords: ['','','','','']
   };
 
-  var baseUrl = 'http://localhost:8888';
+  // var baseUrl = 'http://localhost:8888';
 
   return {
     initialize: function(usersProfile, User){
@@ -177,7 +177,7 @@ angular.module('data', [])
 
 })
 
-.factory('PlaceFactory', function($http){
+.factory('PlaceFactory', function($http, baseUrl){
   
   var location = { 
     host: null,
@@ -205,7 +205,7 @@ angular.module('data', [])
     }
   };
 
-  var baseUrl = 'http://localhost:8888'
+  // var baseUrl = 'http://localhost:8888'
 
   return {
     initialize: function(userLocation, User){
@@ -236,9 +236,9 @@ angular.module('data', [])
 
 })
 
-.factory('RoommateFactory', function($http){
+.factory('RoommateFactory', function($http, baseUrl){
 
-  var baseUrl = 'http://localhost:8888'
+  // var baseUrl = 'http://localhost:8888'
 
   var roommatePreferences = {
     gender: null,
@@ -274,9 +274,10 @@ angular.module('data', [])
 
 })
 
-.factory('CandidatesFactory', function($http, $rootScope){
 
-  var baseUrl = 'http://localhost:8888'
+.factory('CandidatesFactory', function($http, $rootScope, baseUrl){
+
+  // var baseUrl = 'http://localhost:8888'
 
   var candidates = [];
  

@@ -1,6 +1,6 @@
 angular.module('login.services', ['ngResource'])
 
-.factory('LoginFact', function($resource, $http, $rootScope){
+.factory('LoginFact', function($resource, $http, $rootScope, baseUrl){
 
   var UserProfile = $resource('https://graph.facebook.com/me')
   var fbToken = window.sessionStorage['fbtoken'];
@@ -11,7 +11,7 @@ angular.module('login.services', ['ngResource'])
   }
   
   var saveUser = function(user) {
-    var baseUrl = 'http://localhost:8888';
+    // var baseUrl = 'http://localhost:8888';
     return $http({
       method: 'POST',
       url: baseUrl + '/user/' + user.id,
@@ -34,4 +34,5 @@ angular.module('login.services', ['ngResource'])
 })
 
 .value('FIREBASE_REF','https://tinderforroomies.firebaseio.com')
+.value('baseUrl', 'http://roome-app.azurewebsites.net')
 .value('userSession',{});
