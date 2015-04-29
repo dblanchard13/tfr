@@ -2,6 +2,7 @@ www/lib/
 !www/lib/ionic
 bower_components/
 *.log
+server/users/secret.js
 
 build/
 dist/
