@@ -7,6 +7,7 @@ bower_components/
 build/
 dist/
 resources/
+server/users/secret.js
 
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore

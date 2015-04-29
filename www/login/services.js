@@ -34,4 +34,5 @@ angular.module('login.services', ['ngResource'])
 })
 
 .value('FIREBASE_REF','https://tinderforroomies.firebaseio.com')
+.value('baseUrl', 'http://roome-app.azurewebsites.net')
 .value('userSession',{});
